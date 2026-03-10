@@ -21,11 +21,10 @@ jobs:
   
   download:
     runs-on: ubuntu-latest
-
+    needs: build
     steps:
-    - name: Create directory
-      run: mkdir artifacts
-      
+
+
     - uses: actions/download-artifact@v4
       name: Download Artifact
       with:
